@@ -5,6 +5,7 @@ import edu.icet.entity.EmployeeEntity;
 import edu.icet.repository.EmployeeRepository;
 import edu.icet.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
+import org.aspectj.apache.bcel.classfile.InnerClass;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -43,6 +44,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void updateEmployee(Employee employee) {
         repository.save(mapper.map(employee, EmployeeEntity.class));
     }
+
+
 
     @Override
     public Employee searchById(Integer id) {
