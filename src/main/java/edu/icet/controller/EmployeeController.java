@@ -15,7 +15,7 @@ import java.util.List;
 public class EmployeeController {
     final EmployeeService service;
 
-    @PostMapping("/app")
+    @PostMapping("/add")
     @ResponseStatus(HttpStatus.CREATED)
     public void addEmployee(@RequestBody Employee employee){
         service.addEmployee(employee);
